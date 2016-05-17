@@ -27,7 +27,7 @@ setwd(wd)
 #esc.2016 <- read_excel("data/ESC-2016-grand_final-full_results.xls", skip = 1)
 
 # convert to csv first, then clean \n characters (I hate Excel...)
-esc.2016 <- read_csv2("data/ESC-2016-grand_final-full_results.csv") %>% 
+esc.2016 <- read_csv("data/ESC-2016-grand_final-full_results.csv") %>% 
   # rename column names to clean R standards
   setNames(make.names(names(.))) %>% 
   mutate(
@@ -35,7 +35,8 @@ esc.2016 <- read_csv2("data/ESC-2016-grand_final-full_results.csv") %>%
     Jury.Points = ifelse(is.na(Jury.Points), 0, Jury.Points),
     Televote.Points = ifelse(is.na(Televote.Points), 0, Televote.Points),
     # get total points as sum of Jury and Televote
-    Total.Points = Jury.Points + Televote.Points
+    Total.Points = Jury.Points + Televote.Points, 
+    jury.vote.difference = Televote.Points - Jury.Points
   )
 
 
