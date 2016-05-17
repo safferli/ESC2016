@@ -41,4 +41,5 @@ esc.2016 <- read_csv2("data/ESC-2016-grand_final-full_results.csv") %>%
 
 
 
+# http://wol.iza.org/articles/gravity-models-tool-for-migration-analysis/long
 
