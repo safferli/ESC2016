@@ -43,4 +43,34 @@ esc.2016 <- read_csv("data/ESC-2016-grand_final-full_results.csv") %>%
 
 
 # http://wol.iza.org/articles/gravity-models-tool-for-migration-analysis/long
+# dta <- distlist(as.Date("2015-01-01"), type = "capdist", useGW = FALSE)
+# useGW = FALSE: Correlates of War country codes: http://correlatesofwar.org/data-sets/cow-country-codes
+# useGW = TRUE: http://privatewww.essex.ac.uk/~ksg/statelist.html
+
+
+#https://github.com/brechtdv/ggplot2-EU-map/blob/master/europe-map.R
+#http://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html
+#http://egallic.fr/european-map-using-r/
+#http://www.milanor.net/blog/maps-in-r-choropleth-maps/
+# 
+# library(rworldmap)
+# newmap <- getMap(resolution = "low")
+# plot(newmap)
+# 
+# 
+# library(ggmap)
+# europe.limits <- geocode(c("CapeFligely,RudolfIsland,Franz Josef Land,Russia",
+#                            "Gavdos,Greece",
+#                            "Faja Grande,Azores",
+#                            "SevernyIsland,Novaya Zemlya,Russia")
+# )
+# europe.limits
+# 
+# 
+# plot(newmap,
+#      xlim = range(europe.limits$lon),
+#      ylim = range(europe.limits$lat),
+#      asp = 1)
+
+
 
